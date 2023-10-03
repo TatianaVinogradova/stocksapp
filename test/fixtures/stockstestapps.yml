@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  funds_name: MyString
+  stockname: MyString
+  date: 2023-09-05
+  price: 1.5
+
+two:
+  funds_name: MyString
+  stockname: MyString
+  date: 2023-09-05
+  price: 1.5

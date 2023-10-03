@@ -1,0 +1,2 @@
+class Stockstestapp < ApplicationRecord
+end

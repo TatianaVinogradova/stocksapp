@@ -1,0 +1,38 @@
+<%= form_with(model: stockstestapp) do |form| %>
+  <% if stockstestapp.errors.any? %>
+    <div style="color: red">
+      <h2>
+        <%= pluralize(stockstestapp.errors.count, "error") %> prohibited this stockstestapp from being saved:
+      </h2>
+      <ul>
+        <% stockstestapp.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :funds_name %>
+    <%= form.text_field :funds_name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :stockname %>
+    <%= form.text_field :stockname, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :date %>
+    <%= form.date_field :date, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :price %>
+    <%= form.text_field :price, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update", class:"btn btn-dark" %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+    <th>Funds</th>
+    <th>Stock</th>
+    <th>Date</th>
+    <th>Price</th>
+    <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @stockstestapps.each do |stockstestapp| %>
+    <tr>
+    <td><%= stockstestapp.funds_name %>
+    </td>
+    <td><%= stockstestapp.stockname %>
+    </td>
+    <td><%= stockstestapp.date %>
+    </td>
+    <td><%= stockstestapp.price %>
+    </td>
+
+    
+      <td><%= link_to "Show", stockstestapp %></td>
+      
+    </tr>
+  <% end %>
+</tbody>
+</table>
+<br>
+<%= link_to "New", new_stockstestapp_path, class:"btn btn-dark" %>

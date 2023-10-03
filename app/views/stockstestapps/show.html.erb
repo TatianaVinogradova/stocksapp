@@ -1,0 +1,11 @@
+<div class="jumbotron">
+<h1 class="display-4"><%= @stockstestapp.funds_name %></h1>
+  <p class="lead"><%= @stockstestapp.stockname %> |
+  <%= @stockstestapp.date %> |
+  <%= @stockstestapp.price %></p>
+  <br/>
+  
+  <%= link_to "Edit", edit_stockstestapp_path(@stockstestapp), class:"btn btn-dark" %>
+  <%= link_to "Back", stockstestapps_path, class:"btn btn-dark" %>
+  <%= link_to "Delete", @stockstestapp, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-danger" %>
+</div>
